@@ -1,0 +1,43 @@
+.some-text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+    font-style: italic;
+}
+
+.somen-texten {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 350;
+    line-height: 40px;
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+.texten {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 150;
+    line-height: 30px;
+    font-style: oblique;
+    text-align: center;
+}
+
+.somentextru {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    font-weight: 200;
+    word-spacing: 30px;
+    text-decoration-line: overline;
+    text-decoration-style: wavy;
+    text-decoration-color: blueviolet;
+}
+.underline {
+    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: 150;
+    text-align: left;
+    text-decoration: underline;
+    letter-spacing: 5px;
+}
