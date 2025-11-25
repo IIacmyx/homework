@@ -1,0 +1,28 @@
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+
+caption {
+    border: 1px solid #000;
+    border-bottom: none;
+    padding-left: 1;
+}
+
+
+th {
+    border: 1px solid #000;
+}
+
+.capitol-text {
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+.subb {
+    color: crimson;
+}
+.normal {
+    font-family: sans-serif;
+    font-weight: normal;
+}
