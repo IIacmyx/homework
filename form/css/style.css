@@ -1,0 +1,91 @@
+body {
+    display: block;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+
+.form {
+    display: block;
+    max-width: 350px;
+}
+
+textarea {
+    resize: vertical;
+    max-height: 200px;
+}
+
+.divname {
+    padding-bottom: 10px;
+}
+
+.divnumber {
+    padding-bottom: 10px;
+}
+
+.divtel {
+    padding-bottom: 10px;
+}
+
+.divemeil {
+    padding-bottom: 10px;
+}
+
+.fieldset {
+    border-top: 0;
+    padding-top: 0px;
+    display: block;
+}
+
+.fieldsetfor {
+    border-bottom: 0;
+    padding-bottom: 0px;
+    display: block;
+}
+
+#post-name {
+    padding-right: 35px;
+}
+
+#number {
+    padding-right: 35px;
+}
+
+#tel {
+    padding-right: 35px;
+}
+
+#email {
+    padding-right: 35px;
+}
+
+::placeholder {
+    padding-left: 10px;
+}
+
+input {
+    border: 1px solid #2c2a2a;
+    border-radius: 6px;
+}
+
+textarea {
+    border: 1px solid #2c2a2a;
+    border-radius: 6px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #2c2a2a;
+    border-radius: 5px;
+}
+
+.cursor {
+    cursor: pointer;
+}
