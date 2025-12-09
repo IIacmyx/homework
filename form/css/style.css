@@ -1,10 +1,13 @@
 body {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: sans-serif;
+    min-height: 100vh;
 }
 
-h1 {
-    font-size: 18px;
+* {
+    box-sizing: border-box;
 }
 
 h2 {
@@ -14,12 +17,19 @@ h2 {
 
 .form {
     display: block;
-    max-width: 350px;
+    max-width: 400px;
+    width: 100%;
 }
 
 textarea {
     resize: vertical;
     max-height: 200px;
+    margin-bottom: 20px;
+}
+
+textarea:focus-visible {
+    outline: 2px solid blueviolet;
+    outline-offset: 1px;
 }
 
 .divname {
@@ -42,12 +52,18 @@ textarea {
     border-top: 0;
     padding-top: 0px;
     display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
 }
 
 .fieldsetfor {
     border-bottom: 0;
     padding-bottom: 0px;
     display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
 }
 
 #post-name {
@@ -73,19 +89,100 @@ textarea {
 input {
     border: 1px solid #2c2a2a;
     border-radius: 6px;
+    font-size: 100%;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input:disabled {
+    opacity: 0.7s;
+}
+
+input:focus-visible {
+    outline: 2px solid blueviolet;
+    outline-offset: 1px;
 }
 
 textarea {
     border: 1px solid #2c2a2a;
     border-radius: 6px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
-button {
+textarea:disabled {
+    opacity: 0.7s;
+}
+
+.button {
+    border: none;
     cursor: pointer;
     border: 1px solid #2c2a2a;
     border-radius: 5px;
+    padding: 6px 18px;
+    background-color: blueviolet;
+    color: aliceblue;
+    transition: opacity 0.2s;
+}
+
+.button:focus-visible {
+    outline: 2px solid blueviolet;
+    outline-offset: 1px;
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+.button:active {
+    background-color: rgb(105, 34, 171);
+}
+
+.button:disabled,
+.cursor:disabled::after {
+    opacity: 0.5s;
+    cursor: not-allowed
+}
+
+.button:not(:disabled):active {
+    background-color: blueviolet;
+}
+
+.checkbox-label {
+    padding-left: 16px;
 }
 
 .cursor {
+    position: absolute;
+    appearance: none;
+    outline: none;
+    width: 0;
+    height: 0;
+    border: 0;
+}
+
+.cursor::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-left: -22px;
+    border: 1px solid #333;
+    border-radius: 4px;
     cursor: pointer;
+}
+
+.cursor:checked::after {
+    background: url("../images/check-icon.svg") no-repeat center, #9e1fff;
+}
+
+
+.cursor:focus-visible::after {
+    outline: 2px solid blueviolet;
+    outline-offset: 1px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
 }

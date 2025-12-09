@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Практика по форме</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
 </head>
 
 <body>
@@ -42,13 +43,11 @@
             <legend></legend>
             Сообщение<br>
             <textarea name="maseg" id="maseg" placeholder="Ваше сообщение"></textarea>
-            <label for="checkbox">
-                <div>
-                    <input class="cursor" type="checkbox" required name="name">
-                    Я принимаю правила
-                </div>
+            <label class="checkbox-label">
+                <input type="checkbox" class="cursor" required>
+                <span>Я принимаю правила</span>
             </label>
-            <button>Отправить</button>
+            <button class="button">Отправить</button>
         </fieldset>
     </form>
 
