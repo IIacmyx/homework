@@ -1,0 +1,168 @@
+.hero {
+    position: relative;
+    padding-top: 80px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    bottom: 106px;
+    height: 48px;
+    background: url(../img/decor-lar-icon.svg) repeat-x;
+}
+
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+
+.hero h1 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 62px;
+    line-height: 115%;
+    text-transform: uppercase;
+    color: #2c332f;
+    margin-bottom: 40px;
+}
+
+.hero h1 strong {
+    color: #3596ed;
+    font-weight: 600;
+}
+
+.hero-info .text {
+    margin-bottom: 140px;
+    max-width: 440px;
+}
+
+.hero-img {
+    position: relative;
+    display: flex;
+}
+
+.hero-ch {
+    position: absolute;
+    border: 1px solid #535755;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 161px;
+    padding: 22px;
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+.news-article {
+    display: flex;
+    flex-direction: column;
+    max-width: 284px;
+    background: #fff;
+    border: 1px solid #d3cbd9;
+    overflow: hidden;
+}
+.news-container {
+    display: flex;
+    gap: 28px;
+}
+
+.news-article img {
+    display: block;
+}
+
+.news-info {
+    padding: 20px 20px 0;
+    margin-bottom: 12px;
+}
+
+.news-article footer {
+    margin-top: auto;
+    padding: 0 20px 20px;
+}
+
+.news-date {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.news-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #3596ed;
+}
+
+.news-link::after {
+    display: inline-block;
+    content: "";
+    width: 22px;
+    height: 9px;
+    background: url(../img/arro-right-icon.svg);
+    transition: transform 0.2s;
+}
+
+.news-link:hover::after {
+    transform: translateX(5px);
+}
+
+.faq {
+    position: relative;
+}
+.faq::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: calc(50% - 250px);
+    top: 215px;
+    height: 48px;
+    background: url(../img/decor-lar-icon.svg) repeat-x;
+
+}
+
+.faq-container {
+    display: flex;
+    gap: 28px;
+}
+
+details {
+    margin-bottom: 20px;
+    border-block: 1px solid #d3cbd9;
+}
+
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    list-style: none;
+    padding: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+summary::after {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 22px;
+    background: url(../img/arro-bottom.svg) no-repeat center ;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+details > p {
+    padding: 0 20px 20px;
+}
