@@ -1,6 +1,6 @@
 
 
-.article-title {
+.article__title {
     max-width: 596px;
     font-family: Oswald,sans-serif;
     font-weight: 600;
@@ -11,11 +11,11 @@
     margin-bottom: 40px;
 }
 
-.article-title-large {
+.article__title-large {
     font-size: 48px;
 }
 
-.article-title-medium {
+.article__title-medium {
     font-size: 36px;
 }
 
@@ -26,7 +26,7 @@
     padding-bottom: 120px;
 }
 
-.article-text {
+.article__text {
     margin-bottom: 20px;
     font-weight: 400;
     font-size: 16px;
@@ -34,38 +34,38 @@
     color: #535755;
 }
 
-.article-mb-1 {
+.article__mb-1 {
     margin-bottom: 80px;
 }
 
-.article-mb-2 {
+.article__mb-2 {
     margin-bottom: 80px;
 }
 
-.article-dicor-wapper {
+.article__dicor-wapper {
     position: relative;
 }
 
-.article-dicor-wapper-1::before {
+.article__dicor-wapper-1::before {
     top: 100px;
     left: 0;
 }
 
-.article-dicor-wapper-2::before {
+.article__dicor-wapper-2::before {
     right: 0;
     bottom: 136px;
 }
 
 
-.article-list {
+.article__list {
     margin-top: 0;
     padding-left: 14px;
 }
 
-.article-item:not(:last-child) {
+.article__item:not(:last-child) {
     margin-bottom: 12px;
 }
-.article-item::marker {
+.article__item::marker {
     font-size: 22px;
     color: #3596ED;
     padding-left: 16px;
@@ -97,18 +97,18 @@ background-color: #2f81c9;
 button:not(:disabled):active {
     background-color: #3596ED;
 }
-.article-text:last-child {
+.article__text:last-child {
     margin-bottom: 0;
 }
 
 @media (width <= 768px) {
-    .article-dicor-wapper::before {
+    .article__dicor-wapper::before {
         display: none;
     }
-    .article-mb-1 {
+    .article__mb-1 {
         margin-bottom: 60px;
     }
-    .article-title-medium {
+    .article__title-medium {
         font-size: 32px;
     }
 }
@@ -117,17 +117,17 @@ button:not(:disabled):active {
         padding-top: 60px;
         padding-bottom: 80px;
     }
-    .article-mb-1 {
+    .article__mb-1 {
         padding-bottom: 40px;
     }
-    .article-mb-2 {
+    .article__mb-2 {
         padding-bottom: 30px;
         margin-bottom: 30px;
     }
-    .le-article {
+    .le__article {
         font-size: 32px;
     }
-        .article-title-medium {
+        .article__title-medium {
         font-size: 28px;
     }
     button {

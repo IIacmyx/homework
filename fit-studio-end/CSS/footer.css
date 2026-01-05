@@ -5,18 +5,18 @@
     margin-top: auto;
 }
 
-.footer-top {
+.footer__top {
     padding-bottom: 40px;
     margin-bottom: 40px;
     border-bottom: 1px solid #d3cbd9
 }
 
-.footer-logo {
+.footer__logo {
     display: inline-block;
     margin-bottom: 40px;
 }
 
-.menu ul {
+.footer__menu ul {
     display: flex;
     list-style: none;
     margin: 0;
@@ -26,7 +26,7 @@
     align-content: center;
 }
 
-.menu a {
+.footer__menu a {
     font-weight: 400;
     font-size: 16px;
     line-height: 130%;
@@ -34,7 +34,7 @@
     transition: color 0.2s;
 }
 
-.menu a:hover {
+.footer__menu a:hover {
     color: #3596ED;
 }
 
@@ -46,7 +46,7 @@
 }
 
 @media (max-width:768px) {
-    .menu ul {
+    .footer__menu ul {
         flex-direction: column;
         gap: 25px;
     }
