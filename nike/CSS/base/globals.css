@@ -9,9 +9,9 @@
     min-height: 200vh;
     background-color: var(--bg-color);
 }
-/* .page__body--no-scroll {
+.page__body--no-scroll {
     overflow-y: hidden;
-} */
+}
 
 .container {
     width: min(var(--container-witht), 100% - var(--container-padding) * 2);
