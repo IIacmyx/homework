@@ -26,7 +26,7 @@
 }
 
 @font-face {
-    font-family: Monserat;
+    font-family: Montserrat;
     src: local(MontserratSemiBold), local(Montserrat-Semibold),
         url("../../fonts/MontserratSemiBold.woff2") format(woff2);
     font-weight: 600;

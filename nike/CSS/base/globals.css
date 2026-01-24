@@ -6,7 +6,6 @@
 
 .page__body {
     min-width: 375px;
-    min-height: 200vh;
     background-color: var(--bg-color);
 }
 .page__body--no-scroll {
@@ -24,3 +23,6 @@ button:focus-visible {
     outline: 1px solid var(--accent-color);
     outline-offset: 2px;
 }
+/* .main {
+    padding-top: 60px;
+} */

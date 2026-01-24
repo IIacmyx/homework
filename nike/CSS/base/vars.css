@@ -1,6 +1,6 @@
 :root {
     /* font-family */
-    --font-family: "Montserrat", sans-serif;
+    --font-family: "Montserrat";
     /* colors */
     --main-color: #fff;
     --accent-color: #ffea00;
@@ -14,6 +14,7 @@
     /* transition */
     --transition-time: 0.2s;
     /* layers */
+    --layer-negative:-1;
     --layer-1: 1;
     --layer-2: 2;
     --layer-3: 3;
