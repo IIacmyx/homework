@@ -1,0 +1,189 @@
+/* Brands Section - чёрный фон */
+.brands {
+    background-color: #000000;
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brands__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: var(--container-width, 1430px);
+    margin: 0 auto;
+    padding: 0 var(--container-padding, 100px);
+    width: 100%;
+}
+
+.brands__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+}
+
+.brands__text {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 900;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.brands__text:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* Индивидуальные стили для каждого бренда */
+.brands__text--versace {
+    font-size: 32px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 3px;
+    background: linear-gradient(135deg, #C4A35A 0%, #E8D5A3 50%, #C4A35A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.brands__text--zara {
+    font-size: 36px;
+    letter-spacing: 6px;
+    font-weight: 700;
+}
+
+.brands__text--gucci {
+    font-family: 'Garamond', 'Playfair Display', serif;
+    font-size: 34px;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+.brands__text--prada {
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
+.brands__text--calvin {
+    font-size: 26px;
+    letter-spacing: 3px;
+}
+
+/* Адаптивность */
+@media (max-width:1200px) {
+    .brands__container {
+        padding: 060px;
+    }
+}
+
+@media (max-width:1024px) {
+    .brands__container {
+        padding: 040px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .brands__text {
+        font-size: 20px;
+    }
+
+    .brands__text--versace {
+        font-size: 24px;
+    }
+
+    .brands__text--zara {
+        font-size: 26px;
+    }
+
+    .brands__text--prada {
+        font-size: 22px;
+    }
+
+    .brands__text--calvin {
+        font-size: 18px;
+    }
+
+    .brands__text--gucci {
+        font-size: 24px;
+    }
+}
+
+.brands__text {
+    font-size: 22px;
+}
+
+.brands__text--versace {
+    font-size: 26px;
+}
+
+.brands__text--zara {
+    font-size: 28px;
+}
+
+.brands__text--prada {
+    font-size: 24px;
+}
+
+.brands__text--calvin {
+    font-size: 20px;
+}
+
+.brands__text--gucci {
+    font-size: 26px;
+}
+
+
+@media (max-width: 768px) {
+    .brands {
+        padding: 32px 0;
+    }
+
+    .brands__container {
+        padding: 0 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .brands__text {
+        font-size: 18px;
+    }
+
+    .brands__text--versace {
+        font-size: 20px;
+    }
+
+    .brands__text--zara {
+        font-size: 22px;
+    }
+
+    .brands__text--prada {
+        font-size: 18px;
+    }
+
+    .brands__text--calvin {
+        font-size: 16px;
+    }
+
+    .brands__text--gucci {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brands__container {
+        padding: 0 16px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .brands__item {
+        padding: 8px;
+    }
+}

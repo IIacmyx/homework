@@ -1,0 +1,16 @@
+/* base */
+@import "./base/normalize.css";
+@import "./base/fonts.css";
+@import "./base/vars.css";
+@import "./base/globals.css";
+
+/* blocks */
+@import"./blocks/top-baner.css";
+@import "./blocks/header.css";
+@import "./blocks/hero.css";
+@import "./blocks/brands.css";
+@import "./blocks/product.css";
+@import "./blocks/top-products.css";
+@import "./blocks/my-style.css";
+@import "./blocks/reviews.css";
+@import "./blocks/footer.css";

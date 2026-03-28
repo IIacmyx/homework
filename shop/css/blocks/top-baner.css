@@ -1,0 +1,83 @@
+.top-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 12px 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+.top-banner.hidden {
+    transform: translateY(-100%);
+}
+
+.top-banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    font-size: 14px;
+}
+
+.top-banner-content a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.top-banner-content a:hover {
+    opacity: 0.8;
+}
+
+.banner-close {
+    position: absolute;
+    right: 100px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.banner-close:hover {
+    opacity: 1;
+}
+
+.banner-close svg {
+    display: block;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .banner-close {
+        right: 20px;
+    }
+
+    .top-banner-content {
+        flex-direction: column;
+        gap: 8px;
+        padding: 0 40px 0 20px;
+    }
+
+    .top-banner-content span {
+        font-size: 12px;
+    }
+
+    .top-banner-content a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-banner-content a {
+        font-size: 10px;
+    }
+
+    .banner-close {
+        right: 10px;
+    }
+}

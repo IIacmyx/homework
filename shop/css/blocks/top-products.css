@@ -1,0 +1,203 @@
+/* Секция Лидеры продаж */
+.top__products {
+    padding: 64px 0;
+    background-color: #fff;
+}
+
+.top__products .container {
+    max-width: var(--container-width, 1430px);
+    margin: 0 auto;
+    padding: 0 var(--container-padding, 100px);
+}
+
+.top__products-title {
+    font-family: "FONTSPRING DEMO - Integral CF Heavy", sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #000;
+}
+
+.top__products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.top__products-link {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 16px 43px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 62px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.top__products-link:hover {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.top__products-link-icon {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.top__products-link:hover .top__products-link-icon {
+    transform: translateX(4px);
+}
+
+/* Дополнительные товары лидеров продаж */
+.top__products--additional {
+    padding-top: 0;
+}
+
+.top__products--additional .top__products-grid {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 1280px) {
+    .top__products .container {
+        padding: 0 50px;
+    }
+
+    .top__products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .top__products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 680px) {
+    .top__products .container {
+        padding: 0 20px;
+    }
+
+    .top__products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .top__products-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .top__products {
+        padding: 50px 0;
+    }
+
+    .top__products .product-card__image {
+        margin-bottom: 10px;
+        border-radius: 12px;
+        width: 100%;
+        aspect-ratio: 1 /1;
+    }
+
+    .top__products .product-card__title {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .top__products .product-card__rating {
+        gap: 4px;
+        margin-bottom: 4px;
+    }
+
+    .top__products .star {
+        font-size: 12px;
+    }
+
+    .top__products .rating-value {
+        font-size: 10px;
+    }
+
+    .top__products .product-card__price {
+        font-size: 14px;
+        gap: 4px;
+    }
+
+    .top__products .price-current {
+        font-size: 14px;
+    }
+
+    .top__products .price-old {
+        font-size: 12px;
+    }
+
+    .top__products .price-discount {
+        font-size: 8px;
+        padding: 2px6px;
+    }
+
+    .top__products .price-current {
+        font-size: 16px;
+    }
+
+    .top__products .price-old {
+        font-size: 14px;
+    }
+
+    .top__products .price-discount {
+        font-size: 9px;
+        padding: 3px 6px;
+    }
+
+    .top__products .products__btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 14px 32px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 390px) {
+    .top__products .container {
+        padding: 0 16px;
+    }
+
+    .top__products-title {
+        font-size: 24px;
+    }
+
+    .top__products-grid {
+        gap: 10px;
+    }
+
+    .top__products .products__btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 14px 32px;
+        font-size: 14px;
+    }
+}
