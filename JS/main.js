@@ -1,54 +1,72 @@
-// Задача 1. Расчёт итоговой цены со скидкой и налогом
-function calculateFinalPrice(basePrice, discountPercent, taxRate) {
-  const priceAfterDiscount = basePrice - (basePrice * discountPercent / 100);
-  const finalPrice = priceAfterDiscount * (1 + taxRate);
-  return finalPrice;
-}
+﻿// Задача 1.
 
-// Задача 2. Проверка доступа
-function checkAccess(username, password) {
-  if (username === "admin" && password === "123456") {
-    return "Доступ разрешен";
+const person = {
+  name: "Никита",
+  age: 23,
+  city: "Москва",
+  profession: "Полицейский",
+};
+
+console.log("Задача 1:");
+console.log("Имя:", person.name);
+console.log("Возраст:", person.age);
+console.log("Город:", person.city);
+console.log("Профессия:", person.profession);
+
+// Задача 2.
+
+function isEmpty(obj) {
+  for (const key in obj) {
+    return false;
   }
-  return "Доступ запрещен";
+  return true;
 }
 
-// Задача 3. Определение времени суток
-function getTimeOfDay(hour) {
-  if (hour >= 0 && hour <= 5) {
-    return "Ночь";
-  } else if (hour >= 6 && hour <= 11) {
-    return "Утро";
-  } else if (hour >= 12 && hour <= 17) {
-    return "День";
-  } else if (hour >= 18 && hour <= 23) {
-    return "Вечер";
-  }
-  return "Некорректное время";
+console.log("\nЗадача 2:");
+console.log("Пустой объект:", isEmpty({})); // true
+console.log("Не пустой объект:", isEmpty({ a: 1 })); // false
+
+// Задача 3.
+
+const task = {
+  title: "Изучить JavaScript",
+  description: "Пройти курс по основам JS",
+  isCompleted: false,
+};
+
+function cloneAndModify(object, modifications) {
+  return { ...object, ...modifications };
 }
 
-// Задача 4. Поиск первого чётного числа в диапазоне
-function findFirstEven(start, end) {
-  for (let i = start; i <= end; i++) {
-    if (i % 2 === 0) {
-      return i;
+const modifiedTask = cloneAndModify(task, {
+  isCompleted: true,
+  priority: "high",
+});
+
+console.log("\nЗадача 3:");
+for (const key in modifiedTask) {
+  console.log(`${key}: ${modifiedTask[key]}`);
+}
+
+// Задача 4.
+
+const myObject = {
+  method1() {
+    console.log("Метод 1 вызван");
+  },
+  method2() {
+    console.log("Метод 2 вызван");
+  },
+  property: "Это не метод",
+};
+
+function callAllMethods(obj) {
+  for (const key in obj) {
+    if (typeof obj[key] === "function") {
+      obj[key]();
     }
   }
-  return "Чётных чисел нет";
 }
 
-// Примеры использования:
-console.log(calculateFinalPrice(100, 10, 0.2)); // 108
-console.log(calculateFinalPrice(100, 10, 0));   // 90
-
-console.log(checkAccess("admin", "123456"));    // "Доступ разрешен"
-console.log(checkAccess("user", "123456"));     // "Доступ запрещен"
-
-console.log(getTimeOfDay(3));   // "Ночь"
-console.log(getTimeOfDay(8));   // "Утро"
-console.log(getTimeOfDay(15));  // "День"
-console.log(getTimeOfDay(20));  // "Вечер"
-console.log(getTimeOfDay(25));  // "Некорректное время"
-
-console.log(findFirstEven(1, 10));  // 2
-console.log(findFirstEven(9, 9));   // "Чётных чисел нет"
+console.log("\nЗадача 4:");
+callAllMethods(myObject);
