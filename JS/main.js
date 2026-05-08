@@ -1,72 +1,41 @@
-﻿// Задача 1.
+﻿// Задание 1.
+const users = [
+  { name: 'Alex', age: 24, isAdmin: false },
+  { name: 'Bob', age: 13, isAdmin: false },
+  { name: 'John', age: 31, isAdmin: true },
+  { name: 'Jane', age: 20, isAdmin: false },
+];
 
-const person = {
-  name: "Никита",
-  age: 23,
-  city: "Москва",
-  profession: "Полицейский",
-};
+users.push(
+  { name: 'Ann', age: 19, isAdmin: false },
+  { name: 'Jack', age: 43, isAdmin: true }
+);
 
-console.log("Задача 1:");
-console.log("Имя:", person.name);
-console.log("Возраст:", person.age);
-console.log("Город:", person.city);
-console.log("Профессия:", person.profession);
+// Задание 2.
+function getUserAverageAge(users) {
+  const totalAge = users.reduce((sum, user) => sum + user.age, 0);
+  return totalAge / users.length;
+}
 
-// Задача 2.
+// Задание 3.
+function getAllAdmins(users) {
+  return users.filter(user => user.isAdmin);
+}
 
-function isEmpty(obj) {
-  for (const key in obj) {
-    return false;
+// Задание 4.
+function first(arr, n) {
+  if (n === undefined) {
+    return arr.length > 0 ? [arr[0]] : [];
   }
-  return true;
-}
-
-console.log("\nЗадача 2:");
-console.log("Пустой объект:", isEmpty({})); // true
-console.log("Не пустой объект:", isEmpty({ a: 1 })); // false
-
-// Задача 3.
-
-const task = {
-  title: "Изучить JavaScript",
-  description: "Пройти курс по основам JS",
-  isCompleted: false,
-};
-
-function cloneAndModify(object, modifications) {
-  return { ...object, ...modifications };
-}
-
-const modifiedTask = cloneAndModify(task, {
-  isCompleted: true,
-  priority: "high",
-});
-
-console.log("\nЗадача 3:");
-for (const key in modifiedTask) {
-  console.log(`${key}: ${modifiedTask[key]}`);
-}
-
-// Задача 4.
-
-const myObject = {
-  method1() {
-    console.log("Метод 1 вызван");
-  },
-  method2() {
-    console.log("Метод 2 вызван");
-  },
-  property: "Это не метод",
-};
-
-function callAllMethods(obj) {
-  for (const key in obj) {
-    if (typeof obj[key] === "function") {
-      obj[key]();
-    }
+  if (n === 0) {
+    return [];
   }
+  return arr.slice(0, n);
 }
 
-console.log("\nЗадача 4:");
-callAllMethods(myObject);
+
+console.log('Средний возраст:', getUserAverageAge(users));
+console.log('Администраторы:', getAllAdmins(users));
+console.log('Первые 2 элемента:', first(users, 2));
+console.log('Первый элемент:', first(users));
+console.log('Ноль элементов:', first(users, 0));
