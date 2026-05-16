@@ -131,3 +131,8 @@ body {
 	gap: 0.25rem;
 	flex-shrink: 0;
 }
+
+.input.error {
+	border-color: #e74c3c;
+	background-color: #c53232;
+}

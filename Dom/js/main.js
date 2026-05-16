@@ -44,6 +44,9 @@ const deleteTodoById = (todos, todoId) => {
   return todos;
 };
 
+const isDuplicateTodo = (todos, text) =>
+  todos.some(todo => todo[todoKeys.text].toLowerCase() === text.toLowerCase());
+
 const formElement = document.querySelector(".form");
 const inputElement = document.querySelector(".input");
 const todosElement = document.querySelector(".todos");
@@ -74,35 +77,55 @@ const createTodoElement = text => {
 };
 
 const handleCreateTodo = (todos, text) => {
+  if (isDuplicateTodo(todos, text)) {
+    return null;
+  }
+
   const todo = createTodo(todos, text);
   const todoElement = createTodoElement(text);
 
   todoElement.dataset.id = todo[todoKeys.id];
 
-  const completeButton = todoElement.querySelector(".button-complete");
-  const deleteButton = todoElement.querySelector(".button-delete");
-
-  completeButton.addEventListener("click", () => {
-    const updatedTodo = completeTodoById(todos, Number(todoElement.dataset.id));
-    if (updatedTodo) {
-      todoElement.classList.toggle("completed", updatedTodo[todoKeys.is_completed]);
-    }
-  });
-
-  deleteButton.addEventListener("click", () => {
-    deleteTodoById(todos, Number(todoElement.dataset.id));
-    todoElement.remove();
-  });
-
   todosElement.append(todoElement);
   return todoElement;
 };
+
+todosElement.addEventListener("click", event => {
+  const completeButton = event.target.closest(".button-complete");
+  const deleteButton = event.target.closest(".button-delete");
+
+  if (!completeButton && !deleteButton) return;
+
+  const todoElement = event.target.closest(".todo");
+  if (!todoElement) return;
+
+  const todoId = Number(todoElement.dataset.id);
+
+  if (completeButton) {
+    const updatedTodo = completeTodoById(todos, todoId);
+    if (updatedTodo) {
+      todoElement.classList.toggle("completed", updatedTodo[todoKeys.is_completed]);
+    }
+  }
+
+  if (deleteButton) {
+    deleteTodoById(todos, todoId);
+    todoElement.remove();
+  }
+});
 
 formElement.addEventListener("submit", event => {
   event.preventDefault();
   const text = inputElement.value.trim();
   if (!text) return;
-  handleCreateTodo(todos, text);
+
+  const todoElement = handleCreateTodo(todos, text);
+  if (!todoElement) {
+    inputElement.classList.add("error");
+    setTimeout(() => inputElement.classList.remove("error"), 1500);
+    return;
+  }
+
   inputElement.value = "";
   inputElement.focus();
 });
